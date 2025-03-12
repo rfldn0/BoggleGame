@@ -81,3 +81,66 @@
     - Validate **each letter** based on movement rules.
     - Ensure **no letter is used more than once**.
     - Accept **only one string argument** (the word to be checked).
+
+## How to fork for Collaboration
+
+### **Step 1: Change the Remote to Your Fork**  
+Since you're inside the project folder, update the Git remote to point to your forked repository:  
+
+1. **Check the current remote repository:**  
+   ```sh
+   git remote -v
+   ```
+   This will show the original repository (`rfldn0/BoggleGame`) as `origin`.  
+
+2. **Remove the existing remote:**  
+   ```sh
+   git remote remove origin
+   ```
+
+3. **Add your fork as the new `origin`** (replace `<your-username>` with your GitHub username):  
+   ```sh
+   git remote add origin https://github.com/<your-username>/BoggleGame.git
+   ```
+
+4. **Verify the remote change:**  
+   ```sh
+   git remote -v
+   ```
+   Now, `origin` should point to your forked repository instead of the original.  
+
+---
+
+### **Step 2: Push Your Changes to Your Fork**  
+1. **Ensure you are on the main branch:**  
+   ```sh
+   git checkout master
+   ```
+2. **Push your local copy to your forked repository:**  
+   ```sh
+   git push -u origin main
+   ```
+
+---
+
+### **Step 3: (Optional) Set Up Upstream to Sync with Original Repo**  
+To keep your fork updated with changes from the original repository:  
+
+1. **Add the original repository as an upstream remote:**  
+   ```sh
+   git remote add upstream https://github.com/rfldn0/BoggleGame.git
+   ```
+2. **Fetch updates from the original repo:**  
+   ```sh
+   git fetch upstream
+   ```
+3. **Merge updates into your local branch:**  
+   ```sh
+   git merge upstream/master
+   ```
+4. **Push updates to your fork:**  
+   ```sh
+   git push origin master
+   ```
+
+
