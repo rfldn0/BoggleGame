@@ -79,7 +79,7 @@ class BoggleBoard:
         #base case: after lookup the entire element in the list
         if index == len(word):
             return True
-        if row <= 0 or row >= 4 or col >= 4 or self.visited[row][col] or self.board[row][col] != word[index]:
+        if row < 0 or row >= 4 or col < 0 or col >= 4 or self.visited[row][col] or self.board[row][col] != word[index]:
             return False
 
         self.visited[row][col] = True
